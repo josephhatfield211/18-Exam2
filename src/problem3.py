@@ -203,7 +203,7 @@ class Cloud(object):
             #   cloud4.water      is 10
         """
         # ---------------------------------------------------------------------
-        # TODO: 5. Implement and test this method.
+        # done: 5. Implement and test this method.
         # ---------------------------------------------------------------------
         self.capacity += another_cloud.capacity
         self.water += another_cloud.water
