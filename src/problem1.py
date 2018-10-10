@@ -2,8 +2,8 @@
 Exam 2, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Joey Hatfield.  October 2018.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -48,10 +48,10 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem1a()
-    # run_test_problem1b()
-    # run_test_problem1c()
-    # run_test_problem1d()
+    run_test_problem1a()
+    run_test_problem1b()
+    run_test_problem1c()
+    run_test_problem1d()
 
 
 def run_test_problem1a():
@@ -218,10 +218,13 @@ def problem1a(strings):
       :rtype: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    listnew = []
+    for k in range(len(strings)):
+        listnew.append(len(strings[k]))
+    return listnew
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
@@ -391,10 +394,14 @@ def problem1b(strings):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # done: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    counter = 0
+    for k in range(len(strings)):
+        if is_prime(len(strings[k])) == True:
+            counter += 1
+    return counter
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
@@ -587,11 +594,18 @@ def problem1c(strings):
       :rtype: bool
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # See  IMPORTANT  note before the DEF line of this function.
     # -------------------------------------------------------------------------
-
+    counter = 0
+    for k in range(len(strings)):
+        if is_prime(len(strings[k])) == True:
+            counter += 1
+    if is_prime(counter) == True:
+        return True
+    else:
+        return False
 
 def run_test_problem1d():
     """ Tests the   problem1d   function. """
@@ -777,7 +791,10 @@ def problem1d(strings):
     # TODO: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    for k in range(len(strings)):
+        if is_prime(len(strings[k])):
+            return strings[k]
+    return -1
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
